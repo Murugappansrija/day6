@@ -1,0 +1,107 @@
+1)
+
+class Movie {
+  constructor(title= "", studio = "", rating = "PG") {
+     this.title = title;
+     this.studio = studio;
+     this.rating = rating;
+  }
+
+  getPG(movies = [], rating = '') {
+     return movies.filter((m) => m.rating === rating);
+  }
+}
+var casionRoyaleMovie = new Movie("Casino Royale", "Eon Productions", "PG13");
+var lalaland = new Movie("la la land", "marc plot productions", "R");
+var parasite = new Movie("parasite", "kawak sin-ae", "PG13");
+var rorchach = new Movie("rorchach", "wayfarer flimes", "PG");
+var hangover = new Movie("hangover", "legendary picture","R");
+ var hit     = new Movie("hit","wall poster cinimas","PG")
+ var hit2    = new Movie("hit 2","wall poster cinimas","PG13")
+
+var moviesArray = [casionRoyaleMovie,lalaland,parasite,rorchach,hangover,hit,hit2];
+  
+
+console.log(casionRoyaleMovie.getPG(moviesArray,"PG13"));
+console.log(lalaland.getPG(moviesArray,"R"));
+
+2)
+
+class circle{
+  constructor(radius,color){
+
+  this.radius = radius;
+  this.color = "color"
+  }
+  area(){
+    return 22/7*this.radius*this.radius
+  }
+  color(){
+    return this.color
+  }
+  setradius(r){
+    this.radius = r
+  }
+  setcolor(c){
+    this.color = c
+  }
+  circumtance(){
+    return 2*22/7*this.radius
+  }
+  }
+
+  var a =new circle ("radius","color")
+  a.setradius(10)
+  console.log(a.area())
+  console.log(a.circumtance())
+  
+3)
+
+class person{
+  constructor(name,qualification,DOB,age,adress,state,yearofexperence){
+    this.name= name
+    this.qualification = qualification
+    this.DOB = DOB 
+    this.age = age
+    this.adress = adress
+    this.state = state
+    this.yearofexperence = yearofexperence
+    
+  }
+}
+var murugappan = new person("murugappan","B.E",12.1996,25,"flat  chennai","tamilnadu",1); 
+
+console.log(murugappan)
+
+
+4)
+
+class uber {
+  constructor(startingpoint,endingpoint,priceperkm,totalkm) {
+     
+     this.startingpoint = startingpoint;
+     this.endingpoint = endingpoint;
+     this.priceperkm = priceperkm;
+     this.totalkm = totalkm
+     
+   }
+
+   raidAmount() {
+      return this.priceperkm * this.totalkm;
+   }
+   setTotalkm(q) {
+    this.totalkm = q;
+ }
+
+}
+
+var auto = new uber("madurai","thirunelveli",15,200);
+var taxi = new uber("chennai","theni",20,500);
+auto.setTotalkm(600)
+taxi.setTotalkm(50)
+console.log(auto);
+
+console.log(auto.raidAmount());
+console.log(taxi);
+console.log(taxi.raidAmount());
+ 
